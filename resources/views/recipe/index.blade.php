@@ -17,9 +17,8 @@
 @section('footer.scripts')
     <script>
         $(document).on('click', '#search', function(){
-            console.log("{{ url('/recipe/') }}/"+$('#search-field').val());
             $.ajax({
-                url: "{{ url('/recipe/') }}/"+$('#search-field').val(),
+                url: "{{ url('/recipe/query') }}/"+$('#search-field').val(),
                 method: "GET",
                 success: function(data){
                     $("#output").html(data);
