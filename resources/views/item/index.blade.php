@@ -2,7 +2,7 @@
 
 @section('content')
         <div class="row">
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-12">
                 <!-- Search Form Input -->
                 <div class="form-group">
                     <div class="input-group">
@@ -11,7 +11,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6">
+{{--             <div class="col-xs-12 col-sm-6">
                 <select name="sort" class="chosen-select">
                     <option value=""></option>
                     <option value="name" data-sort="sort-name">Name</option>
@@ -20,7 +20,7 @@
                     <option value="latest" data-sort="sort-latest">Latest</option>
                     <option value="oldest" data-sort="sort-oldest">Oldest</option>
                     <option value="expire" data-sort="sort-expire">Expire</option>
-                </select>
+                </select> --}}
             </div>
         </div>
         <div class="row" id="item-list">
