@@ -1,5 +1,5 @@
-<li class="list-group-item">
-    <div class="row">
+<li class="list-group-item" id="item-list">
+    <div class="row list">
         <span class="col-xs-6">{{$item->name}}</span>
         <span class="col-xs-3 text-muted">
             Expires: {{ $item->expire->diffForHumans() }}
