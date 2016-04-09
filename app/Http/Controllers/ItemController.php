@@ -27,7 +27,6 @@ class ItemController extends Controller
     public function index()
     {
         $items = Auth::user()->items()->get();
-        dd($items);
         return view('item.index', compact('items'));
     }
 

@@ -16,8 +16,7 @@ class CreateItemUserTable extends Migration
             $table->increments('id');
             $table->integer('item_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->integer('quantity')->unsigned();
-            $table->string('name');
+            $table->integer('quantity')->unsigned()->default(1);
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateItemUserTable extends Migration
      */
     public function down()
     {
-        Schema::drop('categories');
+        Schema::drop('item_user');
     }
 }
