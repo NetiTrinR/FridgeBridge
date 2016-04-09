@@ -7,7 +7,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">
-                    <img src="/img/Llama503.png" style="width:100%; padding-bottom:50%; display:block; margin:0 auto;">
+                    <img src="/img/Llama404.png" style="width:100%; display:block; margin:0 auto;">
                 </div>
             </div>
         </div>
