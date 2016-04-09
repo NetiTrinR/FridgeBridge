@@ -20,8 +20,13 @@
                     <option value="latest" data-sort="sort-latest">Latest</option>
                     <option value="oldest" data-sort="sort-oldest">Oldest</option>
                     <option value="expire" data-sort="sort-expire">Expire</option>
+<<<<<<< HEAD
                 </select> --}}
           
+=======
+                </select>
+            </div>--}}
+>>>>>>> 0fc7ec1f4074a09acf7f51bbe0f1648b5e7ad56b
         </div>
         <div class="row" id="item-list">
             <ul class="list-group col-xs-12">
