@@ -35,7 +35,5 @@
 @endsection
 
 @section('footer.scripts')
-    <script>
 
-    </script>
 @endsection
