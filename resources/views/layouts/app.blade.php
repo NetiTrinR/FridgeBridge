@@ -41,8 +41,8 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Fridge Bridge
+                <a class="navbar-brand" href="{{ url('/') }}" style="padding-top:3px !important; padding-bottom:3px !important;">
+                    <img alt="Fridge Bridge" src="/img/FridgeBridge.png" class="img-responsive">
                 </a>
             </div>
 
