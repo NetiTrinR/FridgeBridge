@@ -25,6 +25,6 @@ class User extends Authenticatable
     ];
 
     public function items(){
-        return $this->belongsToMany('Fridge\Item')->withPivot('quantity')->withTimestamps();
+        return $this->belongsToMany('Fridge\Item')->withPivot(['quantity', 'measure'])->withTimestamps();
     }
 }

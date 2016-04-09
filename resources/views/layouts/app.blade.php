@@ -73,7 +73,7 @@
             </div>
         </div>
     </nav>
-
+    @include('partials.notifications')
     @yield('content')
 
     <!-- JavaScripts -->
@@ -81,7 +81,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="{{ elixir('js/all.js') }}"></script>
     <script>
-        $('.chosen').chosen({allow_single_deslect:true});
+        $('.chosen-select').chosen({allow_single_deslect:true});
     </script>
     @yield('footer.scripts')
 </body>
