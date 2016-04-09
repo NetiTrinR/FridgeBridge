@@ -18,7 +18,7 @@ elixir(function(mix) {
         'bootstrap_chosen/bootstrap-chosen.css'
     ])
     .scripts([
-        'chosen.jquery.js', 'List.js'
+        'chosen.jquery.js', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'
     ])
     .version(['css/all.css', 'js/all.js']);
 });
