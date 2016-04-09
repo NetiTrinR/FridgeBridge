@@ -12,16 +12,31 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6">Sort</div>
+            <div class="col-xs-12 col-sm-6">
+                <select name="sort" class="chosen">
+                    <option value=""></option>
+                    <option value="category">Cateogries</option>
+                    <option value="frequency">Frequency</option>
+                    <option value="latest">Latest</option>
+                    <option value="oldest">Oldest</option>
+                    <option value="expire">Expire</option>
+                </select>
+            </div>
         </div>
         <div class="row">
             <div class="col-xs-12">
                 <ul class="list-group">
-                    <li class="list-group-item">List Groups Items</li>
-                    <li class="list-group-item">List Groups Items</li>
-                    <li class="list-group-item">List Groups Items</li>
+                    @foreach($items as $item)
+                        @include('partials.item-listgroup', $item)
+                    @endforeach
                 </ul>
             </div>
         </div>
     </div>
+@endsection
+
+@section('footer.scripts')
+    <script>
+
+    </script>
 @endsection
