@@ -6,7 +6,7 @@
                 Expires: {{ $item->expire->diffForHumans() }}
             </span>
             <span class="col-xs-2 text-muted item-quantity" data-var="quantity">
-                Quantity: {{$item->pivot->quantity }}
+                Quantity: {{$item->pivot->quantity }} {{$item->pivot->measure or ""}}
             </span>
        </div>
     </li>

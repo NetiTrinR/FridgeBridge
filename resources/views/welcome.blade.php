@@ -12,7 +12,7 @@
                             Welcome to Fridge Bridge.<br>
                             The app that tracks your fridge!<br><br>
                             Fridge Bridge keeps an inventory of items in your refridgerator<br> and gives you recipe suggestions based on the items you have.<br><br>
-                            You can <b>add</b> items into your inventory and view your <b>list</b> at any time.<br>
+                            You can <b>add</b> items into your inventory, view your <b>list</b> at any time, and search <b>recipes</b> using keywords.<br>
                         </p>
                 </div>
             </div>
