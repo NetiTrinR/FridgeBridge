@@ -3,10 +3,14 @@
 @section('content')
     <!-- Search Form Input -->
     <div class="form-group">
-        <label for="search" class="control-label">Search</label>
-        <input id="search-field" type="text" name="search" class="form-control" />
+        <label for="search">Search</label>
+        <div class="input-group">
+            <input id="search-field" type="text" name="search" class="form-control" placeholder="Recipes, Ingredients, etc."/>
+            <span class="input-group-btn">
+                <button id="search" class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+            </span>
+        </div>
     </div>
-    <button id="search" type="text" class="btn btn-primary">Search</button>
     <div id="output"></div>
 @endsection
 
