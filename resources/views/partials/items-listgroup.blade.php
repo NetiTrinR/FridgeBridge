@@ -8,6 +8,11 @@
             <span class="col-xs-2 text-muted item-quantity" data-var="quantity">
                 Quantity: {{$item->pivot->quantity }}
             </span>
+            <span class="col-xs-1">
+                <a href="{{ route("item.destroy", $item->id) }}">
+                    <i class="glyphicon glyphicon-remove-circle" style="color: "></i>
+                </a>
+            </span>
             {{--<span class="col-xs-1 text-muted">
                 <a href="{{ url('#') }}">
                     Edit

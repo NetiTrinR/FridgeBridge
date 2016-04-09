@@ -66,4 +66,10 @@ class ItemController extends Controller
         return redirect()->route('item.create')->with('success', 'Item successfully added!');
     }
 
+    public function destroy($id){
+        Auth::user()->items()->detach($id);
+
+        return redirect()->route('item.index')->with('success', 'Item successfully removed!');
+    }
+
 }

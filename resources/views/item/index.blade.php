@@ -11,8 +11,8 @@
                     </div>
                 </div>
             </div>
-{{--             <div class="col-xs-12 col-sm-6">
-                <select name="sort" class="chosen-select">
+  {{--               <div class="col-xs-12 col-sm-6">
+            <select name="sort" class="chosen-select">
                     <option value=""></option>
                     <option value="name" data-sort="sort-name">Name</option>
                     <option value="category" data-sort="sort-categ">Categories</option>
@@ -21,10 +21,10 @@
                     <option value="oldest" data-sort="sort-oldest">Oldest</option>
                     <option value="expire" data-sort="sort-expire">Expire</option>
                 </select> --}}
-            </div>
+          
         </div>
         <div class="row" id="item-list">
-            <ul class="list-group">
+            <ul class="list-group col-xs-12">
                 @foreach($items as $item)
                     @include('partials.items-listgroup', $items)
                 @endforeach
