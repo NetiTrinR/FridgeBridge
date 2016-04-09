@@ -5,7 +5,10 @@ namespace Fridge\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Fridge\Http\Requests;
+use Fridge\Http\Requests\StoreItemRequest;
+use Fridge\Item;
 use Auth;
+use Fridge\Category;
 
 class ItemController extends Controller
 {
@@ -37,7 +40,8 @@ class ItemController extends Controller
      */
     public function create()
     {
-        return view('item.create');
+        $categories = Category::all();
+        return view('item.create', compact('categories'));
     }
 
     /**
@@ -46,9 +50,19 @@ class ItemController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreItemRequest $request)
     {
-        //
+        if(Item::where('name', $request->name)->get()->count() > 0){
+            $item = Item::where('name', $request->name)->get();
+        }else{
+            $input = $request->only('name', 'expire');
+            $input['category_id'] = $request->category;
+            $item = Item::create($input);
+        }
+        dd($item);
+        $user = Auth::user()->items()->save($item);
+
+        return redirect()->route('index.create')->with('success', 'Item successfully added!');
     }
 
     /**
