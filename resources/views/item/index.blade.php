@@ -20,8 +20,8 @@
                     <option value="latest" data-sort="sort-latest">Latest</option>
                     <option value="oldest" data-sort="sort-oldest">Oldest</option>
                     <option value="expire" data-sort="sort-expire">Expire</option>
-                </select> --}}
-            </div>
+                </select>
+            </div>--}}
         </div>
         <div class="row" id="item-list">
             <ul class="list-group">
