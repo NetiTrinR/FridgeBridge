@@ -17,6 +17,7 @@ class CreateItemUserTable extends Migration
             $table->integer('item_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->integer('quantity')->unsigned()->default(1);
+            $table->string('measure')->nullable();
             $table->timestamps();
         });
     }
