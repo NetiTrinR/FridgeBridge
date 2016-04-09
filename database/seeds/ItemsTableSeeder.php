@@ -12,7 +12,7 @@ class ItemsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB:table('items')->truncate();
+        DB::table('items')->truncate();
         DB::table('items')->insert([
         	[
                 'name' => 'Cheddar Cheese',
