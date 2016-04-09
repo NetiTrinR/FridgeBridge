@@ -8,12 +8,6 @@
             <span class="col-xs-2 text-muted item-quantity">
                 Quantity: {{$item->pivot->quantity }}
             </span>
-            {{--<span class="col-xs-1 text-muted">
-                <a href="{{ url('#') }}">
-                    Edit
-                    <i class="glyphicon glyphicon-edit"></i>
-                </a>
-            </span>--}}
-        </div>
+       </div>
     </li>
 </div>
