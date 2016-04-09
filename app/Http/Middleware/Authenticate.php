@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Fridge\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

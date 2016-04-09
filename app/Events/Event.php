@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Fridge\Events;
 
 abstract class Event
 {
