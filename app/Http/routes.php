@@ -16,5 +16,4 @@ Route::get('/', function(){
 
 Route::auth();
 Route::resource('item', 'ItemController',['except'=>['show','edit']]);
-Route::get('item/{item}', 'ItemController@edit');
 Route::get('/home', 'HomeController@index')->name('home');

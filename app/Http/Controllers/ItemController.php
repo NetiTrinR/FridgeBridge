@@ -59,31 +59,13 @@ class ItemController extends Controller
             $input['category_id'] = $request->category;
             $item = Item::create($input);
         }
-        $user = Auth::user()->items()->save($item, $request->only('quantity', 'measure'));
+        $pivots = $request->only('quantity', 'measure');
+        if(empty($pivots['quantity'])){
+            $pivots['quantity'] = 1;
+        }
+        $user = Auth::user()->items()->save($item, $pivots);
 
         return redirect()->route('item.create')->with('success', 'Item successfully added!');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        return 'Item Show';
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        return 'Item Edit';
     }
 
     /**
