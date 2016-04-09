@@ -10,10 +10,16 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/test', function(){
+    dd(edamam_query('chicken'));
+});
+
 Route::get('/', function(){
     return view('welcome');
 })->name('home.welcome');
 
 Route::auth();
 Route::resource('item', 'ItemController',['except'=>['show','edit']]);
+Route::get('/recipe', 'RecipeController@index')->name('recipe.index');
+Route::get('/recipe/{query}/', 'RecipeController@searchRecipes')->name('recipe.search');
 Route::get('/home', 'HomeController@index')->name('home');
