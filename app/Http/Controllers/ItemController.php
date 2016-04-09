@@ -52,17 +52,16 @@ class ItemController extends Controller
      */
     public function store(StoreItemRequest $request)
     {
-        if(Item::where('name', $request->name)->get()->count() > 0){
-            $item = Item::where('name', $request->name)->get();
+        if(Item::where('name', $request->name)->count() > 0){
+            $item = Item::where('name', $request->name)->first();
         }else{
             $input = $request->only('name', 'expire');
             $input['category_id'] = $request->category;
             $item = Item::create($input);
         }
-        dd($item);
-        $user = Auth::user()->items()->save($item);
+        $user = Auth::user()->items()->save($item, $request->only('quantity', 'measure'));
 
-        return redirect()->route('index.create')->with('success', 'Item successfully added!');
+        return redirect()->route('item.create')->with('success', 'Item successfully added!');
     }
 
     /**
