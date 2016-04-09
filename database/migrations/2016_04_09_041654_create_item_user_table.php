@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInvensTable extends Migration
+class CreateItemUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,12 @@ class CreateInvensTable extends Migration
      */
     public function up()
     {
-        Schema::create('invens', function (Blueprint $table) {
+        Schema::create('item_user', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->unsigned();
             $table->integer('item_id')->unsigned();
-            $table->integer('quantity')->unsigned()->default(1);
+            $table->integer('user_id')->unsigned();
+            $table->integer('quantity')->unsigned();
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateInvensTable extends Migration
      */
     public function down()
     {
-        Schema::drop('invens');
+        Schema::drop('categories');
     }
 }
