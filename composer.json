@@ -22,7 +22,10 @@
         ],
         "psr-4": {
             "Fridge\\": "app/"
-        }
+        },
+        "files": [
+            "app/Helpers.php"
+        ]
     },
     "autoload-dev": {
         "classmap": [

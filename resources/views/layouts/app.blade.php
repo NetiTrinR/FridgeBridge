@@ -41,16 +41,26 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}" style="padding-top:3px !important; padding-bottom:3px !important;">
-                    <img alt="Fridge Bridge" src="/img/FridgeBridge.png" class="img-responsive">
+                <a class="navbar-brand" href="{{ url('/') }}" style="padding-top:3px; padding-bottom:3px;">
+                    <span><img alt="Fridge Bridge" src="/img/FridgeBridge.png" class="img-responsive"></span>
                 </a>
+                <a class="nav navbar-text" href="{{ url('/') }}" style="font-weight:bold;">Fridge Bridge</a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/home') }}">Recipes</a></li>
                 </ul>
+
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/item/create') }}">Add</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/item') }}">List</a></li>
+                </ul>
+
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
