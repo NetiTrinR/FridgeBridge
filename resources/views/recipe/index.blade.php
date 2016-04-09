@@ -7,7 +7,7 @@
         <input id="search-field" type="text" name="search" class="form-control" />
     </div>
     <button id="search" type="text" class="btn btn-primary">Search</button>
-    <div id="output" class="col-xs-12"></div>
+    <div id="output"></div>
 @endsection
 
 @section('footer.scripts')
