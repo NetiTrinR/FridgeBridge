@@ -24,7 +24,7 @@ class StoreItemRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required|alpha_dash',
+            'name' => 'required',
             'expire' => 'date|after:today',
             'quantity' => 'numeric',
             'category' => 'exists:categories,id'
