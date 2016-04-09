@@ -97,7 +97,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="{{ elixir('js/all.js') }}"></script>
     <script>
-        $('.chosen-select').chosen({allow_single_deslect:true});
+        // $('.chosen-select').chosen({allow_single_deslect:true}).bind('change', function() {
+        //         console.log($('chosen-select').val());
+        //     });
     </script>
     @yield('footer.scripts')
 </body>
