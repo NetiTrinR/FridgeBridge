@@ -11,11 +11,20 @@
 |
 */
 
+$foods = ['Eggs 12pk', 'Milk 3%','Tomatos'];
+
 $factory->define(Fridge\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(Fridge\Item::class, function(Faker\Generator $faker){
+    return [
+        'name' => $foods[rand(0, count($foods))],
+        'expire' => $faker->dateTime,
     ];
 });
