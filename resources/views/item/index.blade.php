@@ -11,25 +11,9 @@
                     </div>
                 </div>
             </div>
-  {{--               <div class="col-xs-12 col-sm-6">
-            <select name="sort" class="chosen-select">
-                    <option value=""></option>
-                    <option value="name" data-sort="sort-name">Name</option>
-                    <option value="category" data-sort="sort-categ">Categories</option>
-                    <option value="frequency" data-sort="sort-freq">Frequency</option>
-                    <option value="latest" data-sort="sort-latest">Latest</option>
-                    <option value="oldest" data-sort="sort-oldest">Oldest</option>
-                    <option value="expire" data-sort="sort-expire">Expire</option>
-<<<<<<< HEAD
-                </select> --}}
-          
-=======
-                </select>
-            </div>--}}
->>>>>>> 0fc7ec1f4074a09acf7f51bbe0f1648b5e7ad56b
-        </div>
-        <div class="row" id="item-list">
-            <ul class="list-group col-xs-12">
+        </div>  
+        <div id="item-list">
+            <ul class="list-group">
                 @foreach($items as $item)
                     @include('partials.items-listgroup', $items)
                 @endforeach
