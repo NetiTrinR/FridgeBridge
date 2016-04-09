@@ -18,7 +18,7 @@ elixir(function(mix) {
         'bootstrap_chosen/bootstrap-chosen.css'
     ])
     .scripts([
-        'chosen.jquery.js'
+        'chosen.jquery.js', 'List.js'
     ])
     .version(['css/all.css', 'js/all.js']);
 });
