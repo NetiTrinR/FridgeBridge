@@ -5,6 +5,7 @@ namespace Fridge\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Fridge\Http\Requests;
+use Auth;
 
 class ItemController extends Controller
 {
@@ -25,7 +26,9 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return 'Item Index';
+        $items = Auth::user()->items()->get();
+        dd($items);
+        return view('item.index', compact('items'));
     }
 
     /**
@@ -35,7 +38,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        return 'Item Create';
+        return view('item.create');
     }
 
     /**
