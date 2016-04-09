@@ -55,10 +55,9 @@ class ItemController extends Controller
         if(Item::where('name', $request->name)->count() > 0){
             $item = Item::where('name', $request->name)->first();
         }else{
-            $input = $request->only('name', 'expire');
-            $input['category_id'] = $request->category;
-            $item = Item::create($input);
+            $item = Item::create($request->only('name', 'expire'));
         }
+
         $pivots = $request->only('quantity', 'measure');
         if(empty($pivots['quantity'])){
             $pivots['quantity'] = 1;
@@ -68,26 +67,4 @@ class ItemController extends Controller
         return redirect()->route('item.create')->with('success', 'Item successfully added!');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

@@ -50,15 +50,15 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Recipes</a></li>
+                    <li><a href="{{ route('recipe.index') }}">Recipes</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/item/create') }}">Add</a></li>
+                    <li><a href="{{ route('item.create') }}">Add</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/item') }}">List</a></li>
+                    <li><a href="{{ route('item.index') }}">List</a></li>
                 </ul>
 
 

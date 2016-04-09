@@ -50,17 +50,17 @@
             </div>
 
             <!-- Category Form Input -->
-            <div class="form-group {{ $errors->has('category')? 'has-error' : '' }}">
-                <label for="category">Category</label>
-                <select name="category" class="form-control chosen-select" data-placeholder="Select a Category">
+            <div class="form-group {{ $errors->has('category_id')? 'has-error' : '' }}">
+                <label for="category_id">Category</label>
+                <select name="category_id" class="form-control chosen-select" data-placeholder="Select a Category">
                     <option value=""></option>
                     @foreach($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
-                @if($errors->has('category'))
+                @if($errors->has('category_id'))
                 <span class="help-block">
-                    <strong>{{ $errors->first('category') }}</strong>
+                    <strong>{{ $errors->first('category_id') }}</strong>
                 </span>
                 @endif
             </div>
