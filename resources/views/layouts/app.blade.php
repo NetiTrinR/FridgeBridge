@@ -73,8 +73,14 @@
             </div>
         </div>
     </nav>
-    @include('partials.notifications')
-    @yield('content')
+    <div class="container">
+        <div class="row">
+            <div id="notifications" class="col-md-8 col-md-offset-2">
+                @include('partials.notifications')
+            </div>
+        </div>
+        @yield('content')
+    </div>
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
