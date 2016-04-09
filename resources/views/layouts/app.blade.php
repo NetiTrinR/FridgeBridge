@@ -75,7 +75,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div id="notifications" class="col-md-8 col-md-offset-2">
+            <div id="notifications" class="col-xs-12">
                 @include('partials.notifications')
             </div>
         </div>
