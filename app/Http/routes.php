@@ -21,5 +21,5 @@ Route::get('/', function(){
 Route::auth();
 Route::resource('item', 'ItemController',['except'=>['show','edit']]);
 Route::get('/recipe', 'RecipeController@index')->name('recipe.index');
-Route::get('/recipe/{query}/', 'RecipeController@searchRecipes')->name('recipe.search');
+Route::get('/recipe/query/{query}/', 'RecipeController@searchRecipes')->name('recipe.search');
 Route::get('/home', 'HomeController@index')->name('home');
