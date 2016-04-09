@@ -55,9 +55,8 @@ class ItemController extends Controller
         if(Item::where('name', $request->name)->count() > 0){
             $item = Item::where('name', $request->name)->first();
         }else{
-            $item = Item::create($request->only('name', 'expire'));
+            $item = Item::create($request->only('name', 'expire', 'category_id'));
         }
-
         $pivots = $request->only('quantity', 'measure');
         if(empty($pivots['quantity'])){
             $pivots['quantity'] = 1;
