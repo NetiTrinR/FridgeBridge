@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
-                <select name="sort" class="chosen">
+                <select name="sort" class="chosen-select">
                     <option value=""></option>
                     <option value="category">Cateogries</option>
                     <option value="frequency">Frequency</option>
